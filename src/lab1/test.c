@@ -10,16 +10,16 @@
 
 void delay(void);
 
-int main(void) {
+void main(void) {
   int i, j;
 
-  outportb(0x606, 0x80); // å°†ABå£å‡è®¾ç½®æˆ0æ–¹å¼éƒ½æ˜¯è¾“å‡º
+  outportb(0x606, 0x80); // ½«AB¿Ú¾ùÉèÖÃ³É0·½Ê½¶¼ÊÇÊä³ö
 
-  //   ä¾æ¬¡å·¦ç§»
+  //   ÒÀ´Î×óÒÆ
   while (1) {
     int data_B = DATA_B;
     int data_A = DATA_A;
-    // å…ˆè¾“å‡ºåˆ°Aå£
+    // ÏÈÊä³öµ½A¿Ú
     for (i = 0; i < 8; i++) {
       outportb(PA_PORT, data_A);
       outportb(PB_PORT, data_B);
@@ -30,7 +30,7 @@ int main(void) {
   }
 }
 
-// æ‰‹åŠ¨å»¶æ—¶ç¨‹åº
+// ÊÖ¶¯ÑÓÊ±³ÌĞò
 void delay(void) {
   int i, j;
   for (i = 0; i < 1000; i++)
