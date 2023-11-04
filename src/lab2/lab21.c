@@ -15,18 +15,18 @@ int main() {
   int data_C1_high = N1 / 256;
 
   // 先写入计数器0的控制字
-  outport(CTRL_PORT, 0x36);
+  outportb(CTRL_PORT, 0x36);
 
   // 计数器0计数初始化
-  outport(C0_PORT, data_C0_low);
-  outport(C0_PORT, data_C0_high);
+  outportb(C0_PORT, data_C0_low);
+  outportb(C0_PORT, data_C0_high);
 
   // 写入计数器1的控制字
-  outport(CTRL_PORT, 0x76);
+  outportb(CTRL_PORT, 0x76);
 
   // 计数器1计数初始化
-  outport(C1_PORT, data_C1_low);
-  outport(C1_PORT, data_C1_high);
+  outportb(C1_PORT, data_C1_low);
+  outportb(C1_PORT, data_C1_high);
 
   while (1) {
   }
