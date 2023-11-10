@@ -37,7 +37,7 @@ void delay(uint x) {
 }
 uint Val_cnt;
 int aaaa;
-void main(void) {
+int main(void) {
   uchar count = 0;
   uchar tmpL, tmpH;
   while (1) {
