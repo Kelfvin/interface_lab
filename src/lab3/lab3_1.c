@@ -7,8 +7,6 @@
 void delay(int x) {
   int i, j;
   for (i = 0; i < x; i++) {
-    for (j = 0; j < 0x5000; j++)
-      ;
   }
 }
 
@@ -16,11 +14,9 @@ int main() {
   int data;
 
   while (1) {
-    while (!Kbhit()) {
-      for (data = 0; data < 256; data++) {
-        outportb(PORT, data);
-        delay(100);
-      }
+    for (data = 0; data < 256; data++) {
+      outportb(PORT, data);
+      delay(500);
     }
   }
 

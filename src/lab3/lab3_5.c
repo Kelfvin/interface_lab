@@ -12,18 +12,16 @@
 void delay(int x) {
   int i, j;
   for (i = 0; i < x; i++) {
-    for (j = 0; j < 0x5000; j++)
-      ;
   }
 }
 
 int main() {
   int data[4] = {MID, MAX, MIDH, MIN};
 
-  while (!Kbhit()) {
+  while (1) {
     for (int i = 0; i < 4; i++) {
       outportb(PORT, data[i]);
-      delay(100);
+      delay(500);
     }
   }
 

@@ -2,3 +2,5 @@
 .Ds_Store
 # 忽略vscode
 .vscode
+
+.exe
